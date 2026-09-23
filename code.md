@@ -9,6 +9,13 @@
   function name () {}
   ```
 
+- **Naming Conventions:**
+  - **Case:** Prefer `camelCase`.
+  - **Descriptive Names:** Do not uselessly abbreviate variables (e.g., use `value` instead of `val` or `v`). Standard/common abbreviations are allowed when natural (e.g., `decl` for `declaration`).
+- **Comments:**
+  - 
+
 ## comments
 - do not put unnessesary comments explaining obvious/trivial stuff into the files
-- all comments are plain/simple english always in lowercase except for important highlightings
+- all code comments must be written in English.
+- write comments entirely in lowercase, reserving uppercase solely for explicit emphasis.
