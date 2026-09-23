@@ -22,3 +22,7 @@
 - do not put unnessesary comments explaining obvious/trivial stuff into the files
 - all code comments must be written in English.
 - write comments entirely in lowercase, reserving uppercase solely for explicit emphasis.
+
+## Tech Stack & Language
+- **Language:** Plain JavaScript. Do **not** use TypeScript, with the sole exception of `index.d.ts` declaration files for packages.
+- **Target Environment:** Browser-first and ESM-native. Maintain cross-runtime/bundler compatibility (Node.js, Deno, Bun, Vite) while prioritizing native browser execution.
