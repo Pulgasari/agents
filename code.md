@@ -1,28 +1,40 @@
-# Code Structure & File Organization
+# code
 
-- **Core Focus:** Prioritize performance and readability above all else.
-- **Performance Auditing:** Explicitly flag and explain any identified critical performance bottlenecks or anti-patterns, detailing the underlying technical causes.
+## language & environment
+- **language:** plain javascript. no typescript, except central type declarations (`index.d.ts`) for packages.
+- **target:** browser-first and esm-native. keep cross-runtime/bundler compatibility (node, deno, bun, vite), but native browser execution has priority.
 
-- **Modularization:** Split package logic into separate files where sensible, but avoid over-modularizing (do not create a file for every tiny utility).
-- **ordering:** sort items alphabetically and group them logically whenever applicable (e.g., imports, exports, options, properties).
+## priorities
+- **performance and readability** above all else.
+- **performance auditing:** explicitly flag critical bottlenecks and anti-patterns and explain the underlying technical cause.
 
-- **Indentation:** 2 spaces (tabsize: 2).
-- **function declarations:** include a space before and after parentheses, but none inside:
+## structure
+- **modularization:** split package logic into separate files where sensible, but do not over-modularize (no file for every tiny utility).
+- **ordering:** sort alphabetically and group logically wherever applicable (imports, exports, options, properties, ...).
+
+## formatting
+- **indentation:** 2 spaces.
+- **parentheses:** space between identifier and parentheses, none inside. applies to function declarations and methods:
   ```js
-  function name () {}
+  function name (arg, arg2) {}
+  method (arg) {}
   ```
+- **compact but readable:** one-liners are fine wherever they fit. short conditionals belong on one line, not three:
+  ```js
+  if (condition) doSomething();
+  ```
+- **alignment:** align similar or identical consecutive lines:
+  ```js
+  const abc   = null;
+  const heino = new Date;
+  ```
+- **`new` without arguments:** omit the parentheses (`new Date`, not `new Date()`).
 
-- **Naming Conventions:**
-  - **Case:** Prefer `camelCase`.
-  - **Descriptive Names:** Do not uselessly abbreviate variables (e.g., use `value` instead of `val` or `v`). Standard/common abbreviations are allowed when natural (e.g., `decl` for `declaration`).
-- **Comments:**
-  - 
+## naming
+- **case:** `camelCase`.
+- **no useless abbreviations:** `value`, not `val` or `v`. common, natural abbreviations are fine (`decl` for `declaration`), as is shortening names that are really long.
 
 ## comments
-- do not put unnessesary comments explaining obvious/trivial stuff into the files
-- all code comments must be written in English.
-- write comments entirely in lowercase, reserving uppercase solely for explicit emphasis.
-
-## Tech Stack & Language
-- **Language:** Plain JavaScript. Do **not** use TypeScript, with the sole exception of `index.d.ts` declaration files for packages.
-- **Target Environment:** Browser-first and ESM-native. Maintain cross-runtime/bundler compatibility (Node.js, Deno, Bun, Vite) while prioritizing native browser execution.
+- **as few as possible:** do not litter the code with comments. nothing that explains obvious or trivial code.
+- **no doc comments** (jsdoc etc.) in code. documentation is done separately afterwards (`index.d.ts`, docs files).
+- **style:** english, entirely lowercase (uppercase only for explicit emphasis), technical, to the point, no emojis.
