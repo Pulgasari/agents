@@ -5,3 +5,4 @@ central, project-independent rules for coding agents. project-specific rules liv
 @chat.md
 @code.md
 @workflow.md
+@vars.md
