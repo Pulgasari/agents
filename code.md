@@ -35,10 +35,10 @@
 - **no useless abbreviations:** `value`, not `val` or `v`. common, natural abbreviations are fine (`decl` for `declaration`), as is shortening names that are really long.
 
 ### whitelist
-`declaration` -> `decl`
-`declarations` -> `decls`
-`definition` -> `def`
-`definitions` -> `defs`
+- `declaration` -> `decl`
+- `declarations` -> `decls`
+- `definition` -> `def`
+- `definitions` -> `defs`
 
 ## comments
 - **as few as possible:** do not litter the code with comments. nothing that explains obvious or trivial code.
