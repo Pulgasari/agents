@@ -1,5 +1,10 @@
 # code
 
+## comments
+- **as few as possible:** do not litter the code with comments. nothing that explains obvious or trivial code.
+- **no doc comments** (jsdoc etc.) in code. documentation is done separately afterwards (`index.d.ts`, docs files).
+- **style:** english, entirely lowercase (uppercase only for explicit emphasis), technical, to the point, no emojis.
+
 ## language & environment
 - **language:** plain javascript. no typescript, except central type declarations (`index.d.ts`) for packages.
 - **target:** browser-first and esm-native. keep cross-runtime/bundler compatibility (node, deno, bun, vite), but native browser execution has priority.
@@ -40,7 +45,4 @@
 - `definition` -> `def`
 - `definitions` -> `defs`
 
-## comments
-- **as few as possible:** do not litter the code with comments. nothing that explains obvious or trivial code.
-- **no doc comments** (jsdoc etc.) in code. documentation is done separately afterwards (`index.d.ts`, docs files).
-- **style:** english, entirely lowercase (uppercase only for explicit emphasis), technical, to the point, no emojis.
+
